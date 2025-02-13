@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Image src="/logo/TimeLess.png" alt="Logo" width={100} height={100} />
+        <Image src="/logo/timeless_logo-removebg.png" alt="Logo" width={50} height={50} />
       </div>
 
       <h1 className={styles.title}>TimeLess</h1>

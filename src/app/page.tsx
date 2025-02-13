@@ -9,9 +9,9 @@ export default function Home() {
       <main className={styles.main}>
         <ProjectDataWrapper />
       </main>
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <div>FOOTER</div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 interface Props {
-  state: string;
+  state?: string;
 }
 
 const STATES = [
@@ -14,19 +14,19 @@ const STATES = [
 ];
 
 export default function StateComponent({ state }: Props) {
+  if (!state) return null;
   return (
     <div>
-      <p>Project State:</p>
-      <div
-        style={{ position: "relative", fontSize: "1.2rem", fontWeight: "bold" }}
-      >
+      <h3 style={{ marginBottom: "10px" }}>Project State:</h3>
+      <div style={{ position: "relative", fontSize: "1.2rem" }}>
         {STATES.map((option, index) => (
           <p
             key={index}
             style={{
               left: 0,
               top: `${index * 1.5}rem`,
-              opacity: state === option ? 1 : 0.2,
+              opacity: state === option ? 1 : 0.4,
+              fontWeight: state === option ? "bold" : "normal",
               transition: "opacity 0.3s ease-in-out",
             }}
           >
